@@ -17,26 +17,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eci-8j-S3d">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eci-8j-S3d">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-5q-REK">
-                                <rect key="frame" x="258" y="350" width="85" height="30"/>
-                                <state key="normal" title="google login"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-5q-REK">
+                                <rect key="frame" x="280" y="383" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Ova-2u-d58"/>
+                                    <constraint firstAttribute="height" constant="40" id="kOi-MK-24h"/>
+                                </constraints>
+                                <state key="normal" image="googleButton.png"/>
                                 <connections>
                                     <action selector="googleLoginDidTapped:" destination="FMM-Qf-xWd" eventType="touchUpInside" id="IKD-Ue-heH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgd-Tu-5Ff">
-                                <rect key="frame" x="233" y="236" width="134" height="30"/>
-                                <state key="normal" title="Login Anonymously"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgd-Tu-5Ff">
+                                <rect key="frame" x="157" y="256" width="287" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="I6W-Db-VlZ"/>
+                                    <constraint firstAttribute="width" constant="287" id="V0G-37-ArG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Login Anonymously">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="loginAnonymouslyDidTapped:" destination="FMM-Qf-xWd" eventType="touchUpInside" id="KWE-Z3-Vlk"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrLine.png" translatesAutoresizingMaskIntoConstraints="NO" id="BNn-0D-fMt">
+                                <rect key="frame" x="157" y="331" width="287" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="SLZ-oI-w6y"/>
+                                    <constraint firstAttribute="width" constant="287" id="hs2-eJ-hYI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tgd-Tu-5Ff" firstAttribute="centerX" secondItem="fpe-SQ-3xC" secondAttribute="centerX" id="5rx-d4-bQQ"/>
+                            <constraint firstItem="F2s-5q-REK" firstAttribute="top" secondItem="BNn-0D-fMt" secondAttribute="bottom" constant="36" id="8qX-Uk-SKv"/>
+                            <constraint firstItem="BNn-0D-fMt" firstAttribute="top" secondItem="Tgd-Tu-5Ff" secondAttribute="bottom" constant="35" id="9C0-1Z-bYZ"/>
+                            <constraint firstItem="shi-jn-y89" firstAttribute="top" secondItem="F2s-5q-REK" secondAttribute="bottom" constant="177" id="As7-rN-pZz"/>
+                            <constraint firstItem="Eci-8j-S3d" firstAttribute="top" secondItem="fpe-SQ-3xC" secondAttribute="top" id="CDb-ex-M0m"/>
+                            <constraint firstItem="shi-jn-y89" firstAttribute="top" secondItem="Eci-8j-S3d" secondAttribute="bottom" id="IWg-X2-w5L"/>
+                            <constraint firstItem="BNn-0D-fMt" firstAttribute="centerX" secondItem="fpe-SQ-3xC" secondAttribute="centerX" id="It7-Tx-7i8"/>
+                            <constraint firstItem="F2s-5q-REK" firstAttribute="centerX" secondItem="fpe-SQ-3xC" secondAttribute="centerX" id="bbi-QS-T4d"/>
+                            <constraint firstItem="Eci-8j-S3d" firstAttribute="leading" secondItem="fpe-SQ-3xC" secondAttribute="leading" id="kTr-VY-WkP"/>
+                            <constraint firstAttribute="trailing" secondItem="Eci-8j-S3d" secondAttribute="trailing" id="sPn-az-JPr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="anonymousButton" destination="Tgd-Tu-5Ff" id="DGr-mP-M2H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkP-tq-HSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,6 +95,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="OrLine.png" width="864" height="45"/>
         <image name="backgroundPhoto.png" width="1125" height="2001"/>
+        <image name="googleButton.png" width="120" height="120"/>
     </resources>
 </document>
