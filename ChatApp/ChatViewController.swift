@@ -21,6 +21,21 @@ class ChatViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func logoutDidTapped(sender: AnyObject) {
+        //We switch view by setting login view controller as the new root view controller
+        
+        //Create a main storyboard instance
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //From main storyboard instantiate a view controller
+        let loginVC = storyboard.instantiateViewControllerWithIdentifier("LoginVC") as! LoginViewController
+        
+        //Get the app delegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        //Set login controller as root view controller
+        appDelegate.window?.rootViewController = loginVC
+    }
 
     /*
     // MARK: - Navigation

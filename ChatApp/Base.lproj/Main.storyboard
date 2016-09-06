@@ -8,7 +8,7 @@
         <!--Login View Controller-->
         <scene sceneID="4sv-V1-o9O">
             <objects>
-                <viewController id="FMM-Qf-xWd" customClass="LoginViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="FMM-Qf-xWd" customClass="LoginViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n9e-E2-xhD"/>
                         <viewControllerLayoutGuide type="bottom" id="shi-jn-y89"/>
@@ -88,8 +88,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fr0-dH-LUo">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="pvH-m0-pzz">
+                            <connections>
+                                <action selector="logoutDidTapped:" destination="v4S-g7-xT4" id="H5A-hV-jil"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uV-qu-tuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Klj-Y2-w4R">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="nWB-PD-61G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="idX-9A-UJg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v4S-g7-xT4" kind="relationship" relationship="rootViewController" id="2AH-Gn-jbT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBt-lG-fqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="218" y="249"/>
         </scene>
