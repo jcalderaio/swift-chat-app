@@ -90,6 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fr0-dH-LUo">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="pvH-m0-pzz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="logoutDidTapped:" destination="v4S-g7-xT4" id="H5A-hV-jil"/>
                             </connections>
@@ -108,6 +109,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="idX-9A-UJg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14901960784313725" green="0.26666666666666666" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
